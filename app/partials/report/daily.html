@@ -1,0 +1,61 @@
+<div class="row">
+    <div class="col-lg-12">
+        <div>
+            <div style="height:10px"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class='text-left'>
+                        <button class="btn btn-default" ng-click="isCollapsed = !isCollapsed">Toggle Filter</button>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class='text-right'>
+                        <button class="btn text-right">Export</button>
+                    </div>
+                </div>
+            </div>
+            <div style="height:10px"></div>
+
+            <div class="row" collapse="isCollapsed">
+                <div class="col-md-6">
+                    <div class="well well-lg">
+                        <p class="input-group">
+                            <span class="input-group-btn">From Date: &nbsp;</span>
+                            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtFrom" is-open="fromOpened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" ng-click="fromOpen($event)"><i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well well-lg">
+                        <p class="input-group">
+                            <span class="input-group-btn">To Date: &nbsp;</span>
+                            <input type="text" class="form-control" datepicker-popup="{{format}}" ng-model="dtTo" is-open="toOpened" min="minDate" max="'2015-06-22'" datepicker-options="dateOptions" date-disabled="disabled(date, mode)" ng-required="true" close-text="Close" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" ng-click="toOpen($event)"><i class="glyphicon glyphicon-calendar"></i>
+                                </button>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-12">
+        <div id="Chart"></div>
+        <div style="height:10px"></div>
+        <div class="text-center">
+            <div class="btn-group">
+                <button type="button" class="btn btn-primary" ng-model="reportName" btn-radio="'peak'">Peak Bandwidth</button>
+                <button type="button" class="btn btn-primary" ng-model="reportName" btn-radio="'95'">95/5 Bandwidth</button>
+                <button type="button" class="btn btn-primary" ng-model="reportName" btn-radio="'average'">Average Bandwidth</button>
+                <button type="button" class="btn btn-primary" ng-model="reportName" btn-radio="'volume'">Volume</button>
+                <button type="button" class="btn btn-primary" ng-model="reportName" btn-radio="'requests'">Requests</button>
+                <button type="button" class="btn btn-primary" ng-model="reportName" btn-radio="'errors'">Errors</button>
+            </div>
+        </div>
+    </div>
+</div>

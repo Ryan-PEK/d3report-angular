@@ -1,0 +1,18 @@
+<div class="masthead">
+    <ul class="nav nav-justified">
+        <li ng-class="{ active: $state.includes('report.summary') }"><a ui-sref="report.summary.load">Summary</a>
+        </li>
+        <li ng-class="{ active: $state.includes('report.monthly') }"><a ui-sref="report.monthly">Monthly</a>
+        </li>
+        <li ng-class="{ active: $state.includes('report.daily') }"><a ui-sref="report.daily">Daily</a>
+        </li>
+        <li ng-class="{ active: $state.includes('report.requests') }"><a ui-sref="report.requests">Request Types</a>
+        </li>
+        <li ng-class="{ active: $state.includes('report.stream') }"><a ui-sref="report.stream">Streaming</a>
+        </li>
+        <li ng-class="{ active: $state.includes('report.domain') }"><a ui-sref="report.domain">Domain</a>
+        </li>
+    </ul>
+</div>
+
+<div ui-view></div>

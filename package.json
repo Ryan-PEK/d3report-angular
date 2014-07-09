@@ -1,0 +1,12 @@
+{
+  "name": "s7report-cloudviz",
+  "description": "A starter project for s7report",
+  "repository": "",
+  "devDependencies": {
+    "phantomjs" : "~1.9",
+    "karma" : "~0.10",
+    "karma-junit-reporter" : "~0.1",
+    "karma-jasmine" : "~0.1",
+    "karma-ng-scenario" : "~0.1"
+  }
+}
